@@ -33,7 +33,8 @@ const Blogpost = () => {
             if (bg._id === blog_id) {
               return (
                 <>
-                  <h1>{bg.blog_title}</h1>
+                  <h1 className="blogTitle">{bg.blog_title}</h1>
+
                   <img
                     className="post_image"
                     src="../../../Image/about.jpg"
@@ -51,7 +52,7 @@ const Blogpost = () => {
                     </div>
                   </div>
                   <p>{bg.intro}</p>
-                  <h2>{bg.subheading_1}</h2>
+                  <h2 className="heading1">{bg.subheading_1}</h2>
                   <p>{bg.description_1}</p>
                   {bg.subheading_2 && <h2>{bg.subheading_2} </h2>}
                   {bg.description_2 && <p>{bg.description_2} </p>}

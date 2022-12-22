@@ -55,6 +55,9 @@ export const addBlog = (newBlog) => {
                 console.log(error.response);
                 if (error.response != undefined)
                     alert(error.response.data);
+                else {
+                    navigate('/blogs');
+                }
                 // toast.error(error.response?.data, {
                 //     position: toast.POSITION.BOTTOM_RIGHT,
                 // });

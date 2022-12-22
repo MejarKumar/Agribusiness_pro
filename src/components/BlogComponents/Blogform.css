@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 .right_section{
     text-align: right;
 }
@@ -7,7 +7,7 @@
     height: 100%;
     width: 80%;
     padding: 1rem;
-    background: cadetblue;
+    background: rgba(95, 158, 160, 0.653);
     border-radius: 10px;
     text-align: right;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -27,7 +27,15 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.blogTitle{
+    font-weight: bold;
+font-family: 'Roboto Slab', serif;
+}
 
+.heading1{
+    font-weight: 600;
+    font-family: 'Roboto Slab', serif;
+}
 textarea.form-control {
     min-height: calc(1.5em + .75rem + 2px);
 }
