@@ -1,7 +1,7 @@
 import axios from "axios";
 import { url, setHeaders } from "../../api";
 import { toast } from "react-toastify";
-
+import { useNavigate } from 'react-router-dom';
 export const getBlogs = () => {
     return (dispatch) => {
         axios
@@ -37,6 +37,7 @@ export const getBlogById = (id) => {
 
 
 export const addBlog = (newBlog) => {
+    let navigate = useNavigate();
     return (dispatch, getState) => {
         const author = getState().auth.username;
         // const uid = getState().auth._id;
@@ -47,7 +48,8 @@ export const addBlog = (newBlog) => {
                     type: "ADD_BLOG",
                     Blogs,
                 });
-                console.log(Blogs)
+                console.log(Blogs);
+                navigate('/blogs');
             })
             .catch((error) => {
                 console.log(error.response);

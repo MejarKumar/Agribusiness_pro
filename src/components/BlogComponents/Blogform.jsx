@@ -4,8 +4,10 @@ import "./Blogform.css";
 import { Form, InputGroup, FormControl, Button } from "react-bootstrap";
 import { addBlog } from "../../store/actions/blogactions";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export default function Blogform() {
+  let navigate = useNavigate();
   const dispatch = useDispatch();
   const [blog, setBlog] = useState({
     blog_title: "",
@@ -21,6 +23,7 @@ export default function Blogform() {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addBlog(blog));
+
     // setBlog({
     //   blog_title: "",
     //   blog_tags: "",
